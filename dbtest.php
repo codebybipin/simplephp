@@ -11,10 +11,10 @@ if ($connection->connect_errno) {
     exit();
 }
 echo "<br><br><br><br>My awesome PHP test";
-$query = "SELECT * from users";
+$query = "SELECT * from user";
 $rs = $connection->query($query);
 while ($row = $rs->fetch_array(MYSQLI_ASSOC)) {
-    echo $row['user_id'] . " " . $row['username'] . "\n";
+    echo $row['id'] . " " . $row['name'] . "\n";
 }
 $rs->close();
 $connection->close();
