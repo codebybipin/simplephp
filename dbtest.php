@@ -10,11 +10,16 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
-echo "<br><br><br><br>My awesome PHP test";
+echo "<br><br><br><br>My awesome PHP test<br>";
 $query = "SELECT * from user";
 $rs = $connection->query($query);
 while ($row = $rs->fetch_array(MYSQLI_ASSOC)) {
     echo $row['id'] . " " . $row['name'] . "\n";
+    echo $dbhost;
+    echo $dbport;
+    echo $dbuser;
+    echo $dbpwd;
+    echo $dbname;
 }
 $rs->close();
 $connection->close();
