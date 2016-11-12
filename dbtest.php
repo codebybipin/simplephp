@@ -14,12 +14,12 @@ echo "<br><br><br><br>My awesome PHP test<br>";
 $query = "SELECT * from user";
 $rs = $connection->query($query);
 while ($row = $rs->fetch_array(MYSQLI_ASSOC)) {
-    echo $row['id'] . " " . $row['name'] . "\n";
-    echo $dbhost;
-    echo $dbport;
-    echo $dbuser;
-    echo $dbpwd;
-    echo $dbname;
+    echo $row['id'] . " " . $row['name'] . "<br>";
+    echo $dbhost . "<br>";
+    echo $dbport . "<br>";
+    echo $dbuser . "<br>";
+    echo $dbpwd . "<br>";
+    echo $dbname . "<br>";
 }
 $rs->close();
 $connection->close();
